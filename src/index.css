@@ -16,3 +16,7 @@ body,
   @apply w-full h-full block;
 }
 
+.hover\:commands:hover {
+  @apply border-solid border-4 cursor-pointer;
+  border-image: linear-gradient(to bottom right, #59c9f1, #05ab80) 1;
+}

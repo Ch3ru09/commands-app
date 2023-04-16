@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar.tsx";
+import Navbar from "./components/Navbar/index";
 
 function App() {
   return (
@@ -9,4 +9,3 @@ function App() {
 }
 
 export default App;
-
