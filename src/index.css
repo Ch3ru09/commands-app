@@ -47,8 +47,6 @@ body,
     @apply hover:after:w-full hover:after:h-full
     hover:after:border-b-blue-500 hover:after:border-l-blue-500
     hover:after:[transition:height_ease-out_500ms,_width_ease-out_250ms];
-
-    --border-color: #65b2ff;
   }
 }
 
