@@ -23,6 +23,7 @@ body,
     rounded-md text-center justify-center transition-all
     duration-[250ms] relative box-border text-black-100;
 
+    /* hover */
     @apply hover:text-blue-500 hover:cursor-pointer;
 
     /* before */
@@ -31,29 +32,23 @@ body,
     before:border-transparent before:top-0 before:right-0 
     before:transition-all before:duration-[150ms];
 
+    /* hover before */
+    @apply hover:before:w-full hover:before:h-full
+    hover:before:border-t-blue-500 hover:before:border-r-blue-500
+    hover:before:[transition:height_ease-out_500ms,_width_ease-out_250ms];
+
     /* after */
     @apply after:absolute after:box-border after:content-[""]
     after:w-0 after:h-0 after:border-solid after:border-2
     after:border-transparent after:bottom-0 after:left-0
     before:transition-all before:duration-[150ms];
 
+    /* hover after */
+    @apply hover:after:w-full hover:after:h-full
+    hover:after:border-b-blue-500 hover:after:border-l-blue-500
+    hover:after:[transition:height_ease-out_500ms,_width_ease-out_250ms];
+
     --border-color: #65b2ff;
   }
-  .commands:hover::before,
-  .commands:hover::after {
-    width: 100%;
-    height: 100%;
-  }
-
-  .commands:hover::before {
-    border-top-color: var(--border-color);
-    border-right-color: var(--border-color);
-    transition: height 500ms ease-out, width ease-out 250ms;
-  }
-
-  .commands:hover::after {
-    border-bottom-color: var(--border-color);
-    border-left-color: var(--border-color);
-    transition: height ease-out 500ms, width ease-out 250ms;
-  }
 }
+

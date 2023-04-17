@@ -1,4 +1,4 @@
-import Command from "./Command/index";
+import Command from "./command/index";
 
 export default function Navbar() {
   return (
@@ -9,3 +9,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
