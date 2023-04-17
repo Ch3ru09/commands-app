@@ -18,13 +18,15 @@ body,
 
 @layer components {
   .commands {
+    --border-color: #65b2ff;
+
     /* element */
     @apply bg-transparent h-10 w-[90%] flex flex-col mb-3
     rounded-md text-center justify-center transition-all
     duration-[250ms] relative box-border text-black-100;
 
     /* hover */
-    @apply hover:text-blue-500 hover:cursor-pointer;
+    @apply hover:text-[var(--border-color)] hover:cursor-pointer;
 
     /* before */
     @apply before:absolute before:box-border before:content-[""]
@@ -34,7 +36,7 @@ body,
 
     /* hover before */
     @apply hover:before:w-full hover:before:h-full
-    hover:before:border-t-blue-500 hover:before:border-r-blue-500
+    hover:before:border-t-[var(--border-color)] hover:before:border-r-[var(--border-color)]
     hover:before:[transition:height_ease-out_500ms,_width_ease-out_250ms];
 
     /* after */
@@ -45,7 +47,7 @@ body,
 
     /* hover after */
     @apply hover:after:w-full hover:after:h-full
-    hover:after:border-b-blue-500 hover:after:border-l-blue-500
+    hover:after:border-b-[var(--border-color)] hover:after:border-l-[var(--border-color)]
     hover:after:[transition:height_ease-out_500ms,_width_ease-out_250ms];
   }
 }
