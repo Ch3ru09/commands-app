@@ -5,7 +5,7 @@ use tauri::api::process::Command;
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
-fn get_current_dir() -> Vec<String> {
+async fn get_current_dir() -> Vec<String> {
     let out = Command::new("pwd").output().expect("failed to get dir");
     let full_res = out.stdout.replace("\n", "");
     let mut arr = full_res.split("/").collect::<Vec<&str>>();
@@ -17,7 +17,7 @@ fn get_current_dir() -> Vec<String> {
 }
 
 #[tauri::command]
-fn get_user() -> String {
+async fn get_user() -> String {
     let out = Command::new("whoami").output().expect("failed to get user");
     format!("{}", out.stdout)
 }

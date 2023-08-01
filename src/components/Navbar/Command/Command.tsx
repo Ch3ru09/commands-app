@@ -1,6 +1,6 @@
 export default function Command({ name }: Props) {
   return (
-    <div class="commands hover:commands">
+    <div class="commands hover:commands" onclick={() => {}}>
       <p>{name}</p>
     </div>
   );
@@ -9,3 +9,4 @@ export default function Command({ name }: Props) {
 type Props = {
   name?: string;
 };
+
